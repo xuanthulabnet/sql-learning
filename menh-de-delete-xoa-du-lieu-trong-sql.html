@@ -11,34 +11,45 @@ $nav = $index_article->renderlist();
 \XT\Core\Common\Common::eventValue(\XT\Core\System\KeyView::startNav(),$nav);
 
 ?>
-    <h2>Xóa dữ liệu bảng với delete from</h2>
-    <p>Với câu lệnh <strong class="text-danger">delete from</strong> bạn có thể xóa đi các dòng trong bảng dữ liệu, cú pháp cơ bản như sau:</p>
-    <pre class="prettyprint lang-sql">delete from TABLE_NAME
+<h2>Xóa dữ liệu bảng với delete from</h2>
+<p>Với câu lệnh <strong class="text-danger">delete from</strong> bạn có thể xóa đi các dòng trong bảng dữ liệu, cú pháp cơ bản như sau:</p>
+<pre class="prettyprint lang-sql">delete from TABLE_NAME
 where CONDITION;
 </pre>
-    <p class="alert alert-warning">Các dòng dữ liệu khi xóa là không thể phục hồi, nên viết và thi hành câu lệnh <code>delete</code> thật cẩn trọng.</p>
-    <p class="alert alert-warning">Nếu thiếu mệnh đề <strong class="text-danger">WHERE</strong> tất cả các dòng trong bảng bị xóa. Tham khảo thêm về viết
-        <a href="/menh-de-where-loc-du-lieu-trong-sql.html" target="_blank">Mệnh đề Where trong SQL</a></p>
-    <p>Ví dụ, xóa dòng có CustomerName là 'Alfreds Futterkiste'</p>
-    <pre class="prettyprint lang-sql">
+
+    <div class="row">
+        <div class="col-12 col-sm-6">
+            <p class="alert alert-warning">Các dòng dữ liệu khi xóa là không thể phục hồi, nên viết và thi hành câu lệnh <code>delete</code> thật cẩn trọng.</p>
+            <p class="alert alert-warning">Nếu thiếu mệnh đề <strong class="text-danger">WHERE</strong> tất cả các dòng trong bảng bị xóa. Tham khảo thêm về viết
+                <a href="/menh-de-where-loc-du-lieu-trong-sql.html" target="_blank">Mệnh đề Where trong SQL</a></p>
+        </div>
+        <div class="col-12 col-sm-6">
+            <img src="https://raw.githubusercontent.com/xuanthulabnet/sql-learning/master/docs/delete.png
+" alt="delete sql">
+        </div>
+    </div>
+
+
+<p>Ví dụ, xóa dòng có CustomerName là 'Alfreds Futterkiste'</p>
+<pre class="prettyprint lang-sql">
 delete from Customers
 where CustomerName='Alfreds Futterkiste';
 </pre>
-    <a href="/chay-sql-online-cong-cu-hoc-cau-lenh-sql.html?sql=vidu53"
-       class="btn btn-sm btn-warning"
-       target="_blank">Chạy thử</a>
+<a href="/chay-sql-online-cong-cu-hoc-cau-lenh-sql.html?sql=vidu53"
+   class="btn btn-sm btn-warning"
+   target="_blank">Chạy thử</a>
 
 
-    <p>Nhớ lưu lại dữ liệu trước khi thực hành</p>
-    <p class="alert alert-danger">Ở đây có một file CSDL mẫu dạng SQLite, bạn có thể tải về nghiên cứu, thực hành: <a target="_blank" href="https://github.com/ichte/xtlab/blob/master/xtdb.sqlite">CSDL SQLite mẫu</a>.
-        Hoặc sử dụng trực tiếp công cụ Online: <a href="/chay-sql-online-cong-cu-hoc-cau-lenh-sql.html" target="_blank">Chạy SQL</a>
-    </p>
-    <h3>Xóa toàn bộ dữ liệu trong bảng</h3>
-    <pre class="prettyprint lang-sql">
+<p>Nhớ lưu lại dữ liệu trước khi thực hành</p>
+<p class="alert alert-danger">Ở đây có một file CSDL mẫu dạng SQLite, bạn có thể tải về nghiên cứu, thực hành: <a target="_blank" href="https://github.com/ichte/xtlab/blob/master/xtdb.sqlite">CSDL SQLite mẫu</a>.
+    Hoặc sử dụng trực tiếp công cụ Online: <a href="/chay-sql-online-cong-cu-hoc-cau-lenh-sql.html" target="_blank">Chạy SQL</a>
+</p>
+<h3>Xóa toàn bộ dữ liệu trong bảng</h3>
+<pre class="prettyprint lang-sql">
 delete from table_name;
 </pre>
-    <p>Hoặc</p>
-    <pre class="prettyprint lang-sql">
+<p>Hoặc</p>
+<pre class="prettyprint lang-sql">
 delete * from table_name;
 </pre>
 
