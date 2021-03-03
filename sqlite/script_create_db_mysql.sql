@@ -67,7 +67,7 @@ CREATE TABLE Nhanvien (
     Ho          NVARCHAR (255),
     NgaySinh    DATE,
     Anh         NVARCHAR (255),
-    Ghichu      Text
+    Ghichu      Text CHARACTER SET utf8
 );
 DROP TABLE IF EXISTS Shippers;
 CREATE TABLE Shippers (
